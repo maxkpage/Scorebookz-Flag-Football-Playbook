@@ -1,0 +1,238 @@
+<!doctype html>
+
+<head>
+  <meta charset="utf-8">
+
+  <!-- Mobile viewport optimization http://goo.gl/b9SaQ -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--iOS web app, deletable if not needed -->
+  <!--<meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="apple-touch-startup-image" href="/images/mobile/l/splash.png">-->
+
+  <!-- Mobile IE allows us to activate ClearType technology for smoothing fonts for easy reading -->
+  <meta http-equiv="cleartype" content="on">
+
+	<!-- more tags for your 'head' to consider https://gist.github.com/849231 -->
+
+  <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
+  <script src="javascripts/modernizr-custom.js"></script>
+
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
+  <script src="javascripts/jquery_1_6_4.min.js"></script>
+  
+  <script src='javascripts/jquery.mobile.vmouse.js'></script>
+
+  <link href="styles/mobile_tool.css" media="screen" rel="stylesheet" type="text/css" />
+  
+  <title>Mobile Flag Football Playbook - Scorebookz.com - HTML5 Web App</title>
+  <meta name="keywords" content="flag, football, playbook, scorebookz, plays, mobile, app"/>
+  <meta name="description" content="Mobile Flag Football Playbook. HTML5 Web App from Scorebookz.com"/>
+
+</head>
+<body>
+
+  <div id="super_div" class="mobile">
+  
+        <header>
+            <p id="logo"><a href="http://scorebookz.com/?src=flag_football_logo">scorebookz</a><sup>&trade;</sup></p>
+        </header>
+
+	    <h1>Mobile Flag Football Playbook</h1>
+
+        <div id="field">
+            <canvas id="routes">
+                <p>Your browser doesn't support canvas. You should find one. Like chrome, safari, or Firefox ;)</p>
+            </canvas>
+
+            <div class="formation" id="seven_a">
+                <div class="blue"></div>
+                <div class="left"></div>
+                <div class="center"></div>
+                <div class="right"></div>
+                <div class="red"></div>
+                <div class="qb"></div>
+                <div class="orange"></div>
+            </div>
+
+            <div class="formation" id="seven_b">
+                <div class="blue"></div>
+                <div class="left"></div>
+                <div class="center"></div>
+                <div class="right"></div>
+                <div class="orange"></div>
+                <div class="red"></div>
+                <div class="qb"></div>
+            </div>
+
+            <div class="formation" id="seven_c">
+                <div class="blue"></div>
+                <div class="red"></div>
+                <div class="orange"></div>
+                <div class="left"></div>
+                <div class="center"></div>
+                <div class="right"></div>
+                <div class="qb"></div>
+            </div>
+
+            <div class="formation" id="seven_d">
+                <div class="blue"></div>
+                <div class="red"></div>
+                <div class="left"></div>
+                <div class="center"></div>
+                <div class="right"></div>
+                <div class="qb"></div>
+                <div class="orange"></div>
+            </div>
+        </div>
+
+        <h2>Plays <span>(click a number to see a play)</span></h2>
+
+        <ul id="plays" class="black_gradient">
+            <li class="right_border selected">1</li>
+            <li class="right_border">2</li>
+            <li class="right_border">3</li>
+            <li class="right_border">4</li>
+            <li class="right_border">5</li>
+            <li class="right_border">6</li>
+            <li>7</li>
+        </ul>
+
+        <div id="actions" class="black_gradient">
+            <div id="formations" class="right_border">
+                <div class="icon_formation" id="icon_seven_a">
+                    <div class="blue"></div>
+                    <div class="left"></div>
+                    <div class="center"></div>
+                    <div class="right"></div>
+                    <div class="red"></div>
+                    <div class="qb"></div>
+                    <div class="orange"></div>
+                </div>
+                <h3>Change Formation</h3>
+            </div>
+            <div id="man_change">
+                <h3>7 Man</h3>
+                <p>5 & 8 coming soon</p>
+            </div>
+        </div>
+
+        <div id="seven_man_formation_options" class="formation_options">
+            <div id="seven_choice_a" class="formation_choice right_border black_gradient">
+                <p>A</p>
+                <div class="mini_formation" id="mini_seven_a">
+                    <div class="blue"></div>
+                    <div class="left"></div>
+                    <div class="center"></div>
+                    <div class="right"></div>
+                    <div class="red"></div>
+                    <div class="qb"></div>
+                    <div class="orange"></div>
+                </div>
+            </div>
+            <div id="seven_choice_b" class="formation_choice black_gradient">
+                <p>B</p>
+                <div class="mini_formation" id="mini_seven_b">
+                    <div class="blue"></div>
+                    <div class="left"></div>
+                    <div class="center"></div>
+                    <div class="right"></div>
+                    <div class="orange"></div>
+                    <div class="red"></div>
+                    <div class="qb"></div>
+                </div>
+            </div>
+            <div id="seven_choice_c" class="formation_choice right_border black_gradient">
+                <p>C</p>
+                <div class="mini_formation" id="mini_seven_c">
+                    <div class="blue"></div>
+                    <div class="red"></div>
+                    <div class="orange"></div>
+                    <div class="left"></div>
+                    <div class="center"></div>
+                    <div class="right"></div>
+                    <div class="qb"></div>
+                </div>
+            </div>
+            <div id="seven_choice_d" class="formation_choice black_gradient">
+                <p>D</p>
+                <div class="mini_formation" id="mini_seven_d">
+                    <div class="blue"></div>
+                    <div class="red"></div>
+                    <div class="left"></div>
+                    <div class="center"></div>
+                    <div class="right"></div>
+                    <div class="qb"></div>
+                    <div class="orange"></div>
+                </div>
+            </div>
+            <div class="cancel">
+                <span>x</span> cancel
+            </div>
+        </div>
+
+        <div id="info">
+            <h4>What is <a href="http://scorebookz.com">Scorebookz.com</a>?</h4>
+
+            <p>Scorebookz is a free sports team website creator. We have some great features:</p>
+
+            <ul>
+              <li>Easy, online team schedules.</li>
+              <li>Built-in text messages, email alerts, and reminders.</li>
+              <li>Player checkin to know who's coming.</li>
+              <li>Keep score &amp; stats at the team, season, game and player level.</li>
+            </ul>
+
+            <p>We currently support these sports &amp; activites:</p>
+
+            <ul id="activities_list">
+        		<li>Baseball</li>
+        		<li>Softball</li>
+        		<li>Basketball</li>
+        		<li>Volleyball</li>
+        		<li>Soccer</li>
+        		<li>Hockey</li>
+        		<li>Flag Football</li>
+        		<li>Dodgeball</li>
+        		<li>Kickball</li>
+        		<li>Settlers of Catan</li>
+        	</ul>
+
+        	<a href="http://scorebookz.com">Get your Free sports website here &rarr;</a>
+        </div>
+
+  </div>
+
+  <!-- JavaScript at the bottom for fast page loading -->
+
+    <!-- scripts concatenated and minified via ant build script -->
+    <script src="javascripts/helper.js"></script>
+    <!-- end concatenated and minified scripts-->
+
+    <script>
+      // iPhone Scale Bug Fix, read this when using http://www.blog.highub.com/mobile-2/a-fix-for-iphone-viewport-scale-bug/
+      MBP.scaleFix();
+
+      // Media Queries Polyfill https://github.com/shichuan/mobile-html5-boilerplate/wiki/Media-Queries-Polyfill
+      yepnope({
+        test : Modernizr.mq('(min-width)'),
+        nope : ['javascripts/respond.min.js']
+      });
+    </script>
+
+    <script src="javascripts/mobile_flag_football.js"></script>
+    <script src="javascripts/jquery.mobile.vmouse.js"></script>
+
+    <script>
+    //Hide URL Bar
+    addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+
+    function hideURLbar(){
+    window.scrollTo(0,1);
+    }
+    </script>
+
+</body>
